@@ -1,0 +1,54 @@
+
+<app-header></app-header>
+<div class="row">
+
+  <div class="col-12">
+    <form [formGroup]="FaddRoom">
+      <h1> Reservar Habitación </h1>
+
+      <fieldset>
+
+        <legend> Datos del Huesped</legend>
+
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" formControlName="name">
+
+        <label >DNI:</label>
+        <input type="text" id="mail" >
+        <label >Check In:</label>
+        <input class="input-date" type="datetime-local"  formControlName="checkIn" (change)="calcularHorasRestantes()">
+
+
+        <label >Tipo de habitación:</label>
+        <select class="custom-select"  id="roomSelect">
+
+          <option selected>Elige...</option>
+          <option value="sen">Sencilla</option>
+          <option value="dob">Doble</option>
+          <option value="tri">Triple</option>
+          <option value="sui">Suite</option>
+        </select>
+
+        <label>Trae niños:</label>
+        <input type="radio" id="under_13" value="under_13" name="user_age"><label for="under_13" class="light">Si</label><br>
+        <input type="radio" id="over_13" value="over_13" name="user_age"><label for="over_13" class="light">No</label>
+
+      </fieldset>
+      <fieldset>
+
+
+
+        <label for="bio">Observaciones:</label>
+        <textarea id="bio" name="user_bio"></textarea>
+
+
+
+
+      </fieldset>
+
+      <button type="submit">Reservar</button>
+
+    </form>
+  </div>
+</div>
+

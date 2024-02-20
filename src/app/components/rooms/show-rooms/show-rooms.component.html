@@ -1,0 +1,235 @@
+<app-header></app-header>
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <form [formGroup]="formSencilla" >
+            <h5 class="card-title">Sencilla</h5>
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="container-switches">
+                  <label class="switch-label"> 06 </label>
+                  <label class="switch">
+                    <input type="checkbox" formControlName="sroom1">
+                    <span class="slider"></span>
+                    <p class="off">No</p>
+                    <p class="on">Si</p>
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="container-switches">
+                  <label class="switch-label"> 07 </label>
+                  <label class="switch">
+                    <input type="checkbox" formControlName="sroom2">
+                    <span class="slider"></span>
+                    <p class="off">No</p>
+                    <p class="on">Si</p>
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="container-switches" >
+                  <label class="switch-label"> 08 </label>
+                  <label class="switch">
+                    <input type="checkbox" formControlName="sroom3">
+                    <span class="slider"></span>
+                    <p class="off">No</p>
+                    <p class="on">Si</p>
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="container-switches">
+                  <label class="switch-label"> 09 </label>
+                  <label class="switch">
+                    <input type="checkbox" formControlName="sroom4">
+                    <span class="slider"></span>
+                    <p class="off">No</p>
+                    <p class="on">Si</p>
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="container-switches">
+                  <label class="switch-label"> 10 </label>
+                  <label class="switch">
+                    <input type="checkbox" formControlName="sroom5">
+                    <span class="slider"></span>
+                    <p class="off">No</p>
+                    <p class="on">Si</p>
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="container-switches">
+                  <label class="switch-label"> 16 </label>
+                  <label class="switch">
+                    <input type="checkbox" formControlName="sroom6">
+                    <span class="slider"></span>
+                    <p class="off">No</p>
+                    <p class="on">Si</p>
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="container-switches">
+                  <label class="switch-label"> 17 </label>
+                  <label class="switch">
+                    <input type="checkbox" formControlName="sroom7">
+                    <span class="slider"></span>
+                    <p class="off">No</p>
+                    <p class="on">Si</p>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+          </form>
+
+          <a  class="btn btn-primary"  (click)="ReserveSen()"> Reservar  </a>
+          <a  class="btn btn-primary"  (click)="updateRooms()"> Actualizar  </a>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <form [formGroup]="formSencilla" >
+            <h5 class="card-title">Dobles</h5>
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="container-switches">
+                  <label class="switch-label"> 01 </label>
+                  <label class="switch-label2"  > 10:55</label>
+                  <label class="switch">
+                    <input type="checkbox" formControlName="sroom1" [contentEditable]="true">
+                    <span class="slider"></span>
+                    <p class="off">No</p>
+                    <p class="on">Si</p>
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="container-switches">
+                  <label class="switch-label"> 02 </label>
+                  <label class="switch">
+                    <input type="checkbox" formControlName="sroom2">
+                    <span class="slider"></span>
+                    <p class="off">No</p>
+                    <p class="on">Si</p>
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="container-switches" >
+                  <label class="switch-label"> 03 </label>
+                  <label class="switch-label2"  > 10:55</label>
+                  <label class="switch">
+                    <input type="checkbox" formControlName="sroom3">
+                    <span class="slider"></span>
+                    <p class="off">No</p>
+                    <p class="on">Si</p>
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="container-switches">
+                  <label class="switch-label"> 04 </label>
+                  <label class="switch-label2"  > 10:55</label>
+                  <label class="switch">
+                    <input type="checkbox" formControlName="sroom4">
+                    <span class="slider"></span>
+                    <p class="off">No</p>
+                    <p class="on">Si</p>
+                  </label>
+                </div>
+              </div>
+
+            </div>
+
+          </form>
+
+          <a  class="btn btn-primary col-sm-3"  (click)="ReserveSen()"> Reservar  </a>
+          <a  class="btn btn-primary col-sm-3"  (click)="updateRooms()"> Actualizar  </a>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Triple</h5>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="container-switches">
+                <label class="switch-label"> 11 </label>
+                <label class="switch">
+                  <input type="checkbox" formControlName="sroom1" [contentEditable]="true">
+                  <span class="slider"></span>
+                  <p class="off">No</p>
+                  <p class="on">Si</p>
+                </label>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="container-switches">
+                <label class="switch-label"> 05 </label>
+                <label class="switch">
+                  <input type="checkbox" formControlName="sroom2">
+                  <span class="slider"></span>
+                  <p class="off">No</p>
+                  <p class="on">Si</p>
+                </label>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <a  class="btn btn-primary"  (click)="ReserveSen()"> Reservar  </a>
+        <a  class="btn btn-primary"  (click)="updateRooms()"> Actualizar  </a>
+
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Suite</h5>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="container-switches">
+                <label class="switch-label"> 18 </label>
+                <label class="switch">
+                  <input type="checkbox" formControlName="sroom1" [contentEditable]="true">
+                  <span class="slider"></span>
+                  <p class="off">No</p>
+                  <p class="on">Si</p>
+                </label>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="container-switches">
+                <label class="switch-label"> 19 </label>
+                <label class="switch">
+                  <input type="checkbox" formControlName="sroom2">
+                  <span class="slider"></span>
+                  <p class="off">No</p>
+                  <p class="on">Si</p>
+                </label>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
