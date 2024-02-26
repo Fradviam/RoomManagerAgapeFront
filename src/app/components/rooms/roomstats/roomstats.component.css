@@ -6,8 +6,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 500;
   line-height: 1.42em;
-  color:#A7A1AE;
-  background-color:#1F2739;
+
 }
 h1 {
   font-size:1.7em;
@@ -36,12 +35,9 @@ h2 a {
 
 .container{
   margin-top: 100px;
-
-
 }
 
-.blue { color: #185875; }
-.yellow { color: #FFF842; }
+
 
 .container th h1 {
   font-weight: bold;
@@ -57,26 +53,12 @@ h2 a {
   background-color: #323C50;
 }
 
-/* Background-color of the even rows */
-.container tr:nth-child(even) {
-  background-color: #7a8eaf;
-}
-
-.container th {
-  background-color: #99a8ce;
-}
-
-.container td:first-child { color: #000000; }
-
-.container tr:hover  {
-  background-color: #464A52;
-  -webkit-box-shadow: 0 6px 6px -6px #0E1119;
-  -moz-box-shadow: 0 6px 6px -6px #0E1119;
-  box-shadow: 0 6px 6px -6px #0E1119;
-  color: #FFFFFF;
 
 
-}
+
+
+
+
 
 @media (min-width: 800px) {
   .container h1{
