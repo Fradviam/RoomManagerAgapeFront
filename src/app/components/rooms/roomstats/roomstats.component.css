@@ -8,14 +8,87 @@ body {
   line-height: 1.42em;
 
 }
-h1 {
-  font-size:1.7em;
-  font-weight: 300;
+
+.container{
+  margin-top: 100px;
+}
+
+h1{
+  font-size: 20px;
+  font-weight: 100;
+  line-height:1em;
+  text-align: center;
+  color: #314826;
+}
+.clock{
+  float: right;
+}
+h2 {
+  font-size: 20px;
+  font-weight: 100;
   line-height:1em;
   text-align: center;
   color: #314826;
 }
 
+.table-container {
+  overflow-x: auto;
+}
+/* Default styles for larger screens */
+.filters {
+  display: flex;
+  margin-top: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filters label {
+  margin-right: 10px;
+}
+
+.filters select,
+.filters input {
+  width: 200px;
+}
+
+/* Styles for smaller screens (adjust the breakpoint as needed) */
+@media (max-width: 600px) {
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filters label,
+  .filters select,
+  .filters input {
+    margin-bottom: 10px;
+    width: 100%; /* Make inputs and select full width */
+  }
+}
+
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+input[type="checkbox"] {
+  margin: 0;
+}
+
+/*
 h2 {
   font-size:1em;
   font-weight: 300;
@@ -50,19 +123,14 @@ h2 a {
 /
 /* Background-color of the odd rows */
 .container tr:nth-child(odd) {
-  background-color: #323C50;
+  background-color: #cbcbcb;
 }
-
-
-
-
-
 
 
 
 @media (min-width: 800px) {
   .container h1{
-    font-size: 3em;
+    font-size: 2em;
     margin-bottom: 10px;
   }
 }

@@ -4,81 +4,61 @@
 
 
 <div class="container">
-  <h1>Tabla de Habitaciones </h1>
+  <h1>Tabla de Reservaciones </h1>
+  <app-clock></app-clock>
+  <!-- Filtros -->
+  <div class="filters">
+    <label for="habitacionFilter">Habitación:</label>
+    <select id="habitacionFilter">
+      <optgroup label="">
+        <option></option>
+        <option> suite</option>
+        <option> Sencilla</option>
+      </optgroup>
+    </select>
+
+    <label for="fechaFilter">Fecha:</label>
+    <input type="date" id="fechaFilter">
+    <label for="fechaFilter">a </label>
+    <input type="date" id="fechaFilter2">
+
+
+
+    <button >Aplicar Filtros</button>
+
+  </div>
   <div class="table-responsive">
     <table class="table">
       <thead>
       <tr>
-        <th><h1>Tipo</h1></th>
-        <th><h1>Veces rentada</h1></th>
-        <th><h1>Dato x</h1></th>
-        <th><h1>Average</h1></th>
-        <th><h1>test</h1></th>
-        <th><h1>test</h1></th>
-
+        <th><h2>Habitación</h2></th>
+        <th><h2>CheckIn</h2></th>
+        <th><h2>DNI</h2></th>
+        <th><h2>Nombre Huesped</h2></th>
+        <th><h2>Observaciones</h2></th>
 
       </tr>
       </thead>
       <tbody>
-      <tr>
-        <td>Google</td>
-        <td>9518</td>
-        <td>6369</td>
-        <td>01:32:50</td>
-        <td>2961</td>
-        <td>00:12:10</td>
+      <tr *ngFor=" let reserva of ActiveReservations | paginate:{
+                  id:'pagination_casos',
+                  itemsPerPage:10,
+                  currentPage:page,
+                  totalItems:TotalRows
+                 }">
+        <td>{{reserva.habitacion}}</td>
+        <td id="checkIn">{{reserva.checkin}}</td>
+        <td>{{reserva.dni}}</td>
+        <td>{{reserva.huesped}}</td>
+        <td>{{reserva.observaciones}}</td>
       </tr>
-      <tr>
-        <td>Twitter</td>
-        <td>7326</td>
-        <td>10437</td>
-        <td>00:51:22</td>
-        <td>2961</td>
-        <td>00:12:10</td>
-      </tr>
-      <tr>
-        <td>Amazon</td>
-        <td>4162</td>
-        <td>5327</td>
-        <td>00:24:34</td>
-        <td>2961</td>
-        <td>00:12:10</td>
-      </tr>
-      <tr>
-        <td>LinkedIn</td>
-        <td>3654</td>
-        <td>2961</td>
-        <td>00:12:10</td>
-        <td>2961</td>
-        <td>00:12:10</td>
-      </tr>
-      <tr>
-        <td>CodePen</td>
-        <td>2002</td>
-        <td>4135</td>
-        <td>00:46:19</td>
-        <td>2961</td>
-        <td>00:12:10</td>
-      </tr>
-      <tr>
-        <td>GitHub</td>
-        <td>4623</td>
-        <td>3486</td>
-        <td>00:31:52</td>
-        <td>2961</td>
-        <td>00:12:10</td>
-      </tr>
-      <tr>
-        <td>LinkedIn</td>
-        <td>3654</td>
-        <td>2961</td>
-        <td>00:12:10</td>
-        <td>2961</td>
-        <td>00:12:10</td>
-      </tr>
+
 
       </tbody>
     </table>
+    <pagination-controls id="pagination_casos"  previousLabel="Anterior" nextLabel="Siguiente" (pageChange)=" page=$event ">
+
+    </pagination-controls>
   </div>
 </div>
 

@@ -8,6 +8,7 @@ import { AddGuestComponent } from './rooms/add-guest/add-guest.component';
 import { ShowRoomsComponent } from './rooms/show-rooms/show-rooms.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {SharedModule} from "./shared/shared.module";
+import {NgxPaginationModule} from "ngx-pagination";
 
 
 @NgModule({
@@ -22,13 +23,14 @@ import {SharedModule} from "./shared/shared.module";
     AddGuestComponent,
 
   ],
-  imports: [
-    CommonModule,
-    ComponentsRoutingModule,
-    ReactiveFormsModule,
-    SharedModule,
+    imports: [
+        CommonModule,
+        ComponentsRoutingModule,
+        ReactiveFormsModule,
+        SharedModule,
+        NgxPaginationModule,
 
 
-  ]
+    ]
 })
 export class ComponentsModule { }
